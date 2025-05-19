@@ -4,7 +4,7 @@ import React from "react";
 export default function Testimonial({ nombre, opinion, estilo, imagen }) {
   return (
     <section className="px-6 py-12 bg-white text-gray-900 space-y-12">
-      {/* Testimonio 1 */}
+      {/* Testimonio */}
       <div className={estilo}>
         <div className="md:w-1/2">
           <h4 className="mt-2 font-bold text-[30px] text-[#14213D] py-8">{nombre}</h4>

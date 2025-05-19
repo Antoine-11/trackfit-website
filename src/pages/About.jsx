@@ -1,6 +1,5 @@
-
-
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import ServiceCard from "../components/ServiceCard";
 import ContactForm from "../components/ContactForm";
 import TeamMember from "../components/TeamMember";
@@ -8,7 +7,7 @@ import Slider from "../components/Slider";
 
 import historiaImage from "../assets/images/trackfit-home-one.jpg";
 import sliderImage from "../assets/images/gym-team2.jpg"
-import equipo1 from "../assets/images/ana-lopez.jpg";
+import equipo1 from "../assets/images/laura-garcia.jpg";
 import equipo2 from "../assets/images/edu-munoz.jpg";
 import equipo3 from "../assets/images/ana-lopez.jpg";
 import equipo4 from "../assets/images/gines-nico.jpg";
@@ -17,6 +16,11 @@ import equipo6 from "../assets/images/antonio-garni.jpg";
 import equipo7 from "../assets/images/pablo-cestau.jpg";
 import equipo8 from "../assets/images/angeles-guti.jpg";
 import MainLayout from "../layouts/MainLayout";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0 },
+};
 
 export default function About() {
   const services = [
@@ -82,14 +86,19 @@ export default function About() {
         <Slider heroImg={sliderImage} title="SOBRE NOSOTROS" />
 
         {/* Servicios */}
-        <section className="py-12 px-6 max-w-7xl w-full">
+        <motion.section className="py-12 px-6 max-w-7xl w-full" variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ duration: 0.8 }} >
           <h2 className="text-[38px] text-[#14213D] font-bold text-center mb-8">Nuestros Servicios</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((s, i) => (
-              <ServiceCard key={i} title={s.title} description={s.description} icon={s.icon} />
+              <ServiceCard
+                key={i}
+                title={s.title}
+                description={s.description}
+                icon={s.icon}
+              />
             ))}
           </div>
-        </section>
+        </motion.section>
 
         {/* Nuestra Historia */}
         <section

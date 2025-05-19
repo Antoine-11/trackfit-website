@@ -5,9 +5,9 @@ import menuImg from "../assets/images/logo_trackfit_sinfondo.png"
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
-  const buttonRef = useRef(null); // New ref for the toggle button
+  const buttonRef = useRef(null); // Nueva referencia para el toggle button
 
-  // Resize handler
+  // Maneja el redimensionado
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
@@ -23,10 +23,10 @@ export default function Navbar() {
     };
   }, []);
 
-  // Click outside handler - FIXED
+  // Salir al clicar fuera 
   useEffect(() => {
     const handleClickOutside = (e) => {
-      // Check if click is outside both the menu AND the toggle button
+      // Salir si el click es fuera y en la X
       if (
         menuRef.current && 
         !menuRef.current.contains(e.target) &&
@@ -43,7 +43,7 @@ export default function Navbar() {
     };
   }, []);
 
-  // Toggle menu function
+  // Cambio de Menu
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -56,7 +56,7 @@ export default function Navbar() {
           <img src={menuImg} alt="Logo" className="max-w-[150px] mx-auto h-auto" />
         </Link>
 
-        {/* Desktop menu */}
+        {/* Menu de escritorio */}
         <nav className="hidden custom:flex space-x-10 font-medium text-[18px] items-center">
           <Link to="/" className="hover:text-[#FCA311] transition">Inicio</Link>
           <Link to="/about" className="hover:text-[#FCA311] transition">Sobre Nosotros</Link>
@@ -70,7 +70,7 @@ export default function Navbar() {
           </Link>
         </nav>
 
-        {/* Mobile toggle button - FIXED with ref */}
+        {/* Menú hamburguesa versión móvil */}
         <button
           ref={buttonRef}
           onClick={toggleMenu}
@@ -91,7 +91,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile menu overlay */}
+      {/* Menú versión móvil despliegue */}
       {isOpen && (
         <div
           ref={menuRef}

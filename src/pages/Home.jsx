@@ -83,23 +83,12 @@ export default function Home() {
     <MainLayout>
       {/* Slider/Hero */}
       <section className="bg-[#14213D]">
-        <Slider estilos="w-full h-full object-cover rounded-br-[30%]" heroImg={sliderImage} title="INICIA TU CAMINO" />
+        <Slider heroImg={sliderImage} title="INICIA TU CAMINO" />
       </section>
 
       {/* Info general con animación */}
-      <motion.section
-        className="flex flex-col md:flex-row gap-8 py-14 items-center justify-between bg-[#14213D] text-white"
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-      >
-        <motion.div
-          className="md:w-1/2 px-12"
-          variants={fadeUp}
-          transition={{ duration: 1, delay: 0.2 }}
-        >
+      <motion.section className="flex flex-col md:flex-row gap-8 py-14 items-center justify-between bg-[#14213D] text-white" variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ duration: 0.8 }} >
+        <motion.div className="md:w-1/2 px-12" variants={fadeUp} transition={{ duration: 1, delay: 0.2 }} >
           <h2 className="text-[38px] font-semibold mb-4 text-white">
             No cuentes los días, haz que los días cuenten.
           </h2>
@@ -118,11 +107,7 @@ export default function Home() {
           </p>
         </motion.div>
 
-        <motion.div
-          className="md:w-1/2"
-          variants={fadeUp}
-          transition={{ duration: 1, delay: 0.4 }}
-        >
+        <motion.div className="md:w-1/2" variants={fadeUp} transition={{ duration: 1, delay: 0.4 }} >
           <img src={infoImg} alt="Información" className="rounded-xl shadow-lg" />
         </motion.div>
       </motion.section>
@@ -133,91 +118,33 @@ export default function Home() {
       </div>
 
       {/* Testimonios con animación */}
-      <motion.div
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-      >
-        <Testimonial
-          imagen={testimonio1Img}
-          nombre="- Laura G."
-          opinion=' " Después de años probando gimnasios, finalmente encontré en TrackFit el equilibrio perfecto: 
-        máquinas de última generación, ambiente motivador y entrenadores que realmente se preocupan por ti. Es más que un gimnasio, es una comunidad. " '
-          estilo="flex flex-col md:flex-row gap-10 max-w-7xl mx-auto px-6 py-10 italic" />
+      <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2 }} >
+        <Testimonial imagen={testimonio1Img} nombre="- Laura G." opinion=' " Después de años probando gimnasios, finalmente encontré en TrackFit el equilibrio perfecto: 
+        máquinas de última generación, ambiente motivador y entrenadores que realmente se preocupan por ti. Es más que un gimnasio, es una comunidad. " ' estilo="flex flex-col md:flex-row gap-10 max-w-7xl mx-auto px-6 py-10 italic" />
       </motion.div>
 
-      <motion.div
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-      >
-        <Testimonial
-          imagen={testimonio2Img}
-          nombre="- María C."
-          opinion=' " ¡Me encanta el buen rollo que se respira aquí! Desde el primer día me sentí bienvenida. 
-        Las clases son súper dinámicas y los entrenadores te motivan a dar lo mejor. Además, está todo limpísimo y muy bien cuidado. " '
-          estilo="flex flex-col md:flex-row-reverse gap-10 max-w-7xl mx-auto px-6 py-10 italic" />
+      <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.3 }} >
+        <Testimonial imagen={testimonio2Img} nombre="- María C." opinion=' " ¡Me encanta el buen rollo que se respira aquí! Desde el primer día me sentí bienvenida. 
+        Las clases son súper dinámicas y los entrenadores te motivan a dar lo mejor. Además, está todo limpísimo y muy bien cuidado. " ' estilo="flex flex-col md:flex-row-reverse gap-10 max-w-7xl mx-auto px-6 py-10 italic" />
       </motion.div>
 
-      <motion.div
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-      >
-        <Testimonial
-          imagen={testimonio3Img}
-          nombre="- Javier M."
-          opinion=' " Lo que más valoro de TrackFit es la calidad de las máquinas Panatta y la atención personalizada. Se nota que han apostado por ofrecer lo mejor. 
-        Da gusto entrenar aquí, cada día salgo con más ganas de volver. " '
-          estilo="flex flex-col md:flex-row gap-10 max-w-7xl mx-auto px-6 py-10 italic" />
+      <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.3 }} >
+        <Testimonial imagen={testimonio3Img} nombre="- Javier M." opinion=' " Lo que más valoro de TrackFit es la calidad de las máquinas Panatta y la atención personalizada. Se nota que han apostado por ofrecer lo mejor. 
+        Da gusto entrenar aquí, cada día salgo con más ganas de volver. " ' estilo="flex flex-col md:flex-row gap-10 max-w-7xl mx-auto px-6 py-10 italic" />
       </motion.div>
 
-      <motion.div
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-      >
-        <Testimonial
-          imagen={testimonio4Img}
-          nombre="- Antonio J. (63 años)"
-          opinion=' " A mi edad pensé que ya no era momento de empezar en un gimnasio, pero en TrackFit me han demostrado lo contrario. 
-        Me guiaron desde el primer día con paciencia y profesionalidad. Me siento más activo, fuerte y motivado que nunca. " '
-          estilo="flex flex-col md:flex-row-reverse gap-10 max-w-7xl mx-auto px-6 py-10 italic" />
+      <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.3 }} >
+        <Testimonial imagen={testimonio4Img} nombre="- Antonio J. (63 años)" opinion=' " A mi edad pensé que ya no era momento de empezar en un gimnasio, pero en TrackFit me han demostrado lo contrario. 
+        Me guiaron desde el primer día con paciencia y profesionalidad. Me siento más activo, fuerte y motivado que nunca. " ' estilo="flex flex-col md:flex-row-reverse gap-10 max-w-7xl mx-auto px-6 py-10 italic" />
       </motion.div>
 
-      <motion.div
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-      >
-        <Testimonial
-          imagen={testimonio5Img}
-          nombre="- Jesús S. (22 años)"
-          opinion=' " Es mi primer gimnasio y no podría haber elegido mejor. Todo el equipo es cercano, te explican bien cada ejercicio y te ayudan a no sentirte perdido. 
-        ¡Me está enganchando el entrenamiento y cada vez me veo mejor! " '
-          estilo="flex flex-col md:flex-row gap-10 max-w-7xl mx-auto px-6 py-10 italic" />
+      <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.3 }} >
+        <Testimonial imagen={testimonio5Img} nombre="- Jesús S. (22 años)" opinion=' " Es mi primer gimnasio y no podría haber elegido mejor. Todo el equipo es cercano, te explican bien cada ejercicio y te ayudan a no sentirte perdido. 
+        ¡Me está enganchando el entrenamiento y cada vez me veo mejor! " ' estilo="flex flex-col md:flex-row gap-10 max-w-7xl mx-auto px-6 py-10 italic" />
       </motion.div>
-
-      
 
       {/* FAQ con animación */}
-      <motion.div
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: 0.4 }}
-      >
+      <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.4 }} >
         <FAQ />
       </motion.div>
     </MainLayout>

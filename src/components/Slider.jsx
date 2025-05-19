@@ -18,7 +18,7 @@ export default function Slider({ title, heroImg }) {
         transition={{ duration: 1.5, delay: 0.4 }}
       >
         <div className="w-full h-full rounded-lg bg-[#14213D] bg-opacity-50 rounded-br-[30%]">
-        <h1 className="absolute left-60 top-80 text-white text-4xl md:text-5xl font-bold">{title}</h1>
+        <h1 className="absolute left-60 top-80 text-white text-4xl md:text-[62px] font-bold">{title}</h1>
         </div>
       </motion.div>
     </section>

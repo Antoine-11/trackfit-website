@@ -8,13 +8,13 @@ export default function Auth() {
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
         <div className="flex justify-center mb-6">
           <button
-            className={`px-4 py-2 font-semibold ${isLogin ? "text-blue-600 border-b-2 border-blue-600" : "text-gray-500"}`}
+            className={`px-4 py-2 font-semibold ${isLogin ? "text-[#14213D] border-b-2 border-[#14213D]" : "text-gray-500"}`}
             onClick={() => setIsLogin(true)}
           >
             Iniciar sesión
           </button>
           <button
-            className={`px-4 py-2 font-semibold ${!isLogin ? "text-blue-600 border-b-2 border-blue-600" : "text-gray-500"}`}
+            className={`px-4 py-2 font-semibold ${!isLogin ? "text-[#14213D] border-b-2 border-[#14213D]" : "text-gray-500"}`}
             onClick={() => setIsLogin(false)}
           >
             Registrarse
@@ -49,7 +49,7 @@ export default function Auth() {
 
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition duration-300"
+            className="w-full bg-[#14213D] text-white py-2 rounded-md hover:bg-[#1f2e57] transition duration-300 ease-in-out border border-black shadow-[0_0_0_0_black] hover:-translate-y-1 hover:-translate-x-0.5 hover:shadow-[2px_5px_0_0_black] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[0_0_0_0_black]"
           >
             {isLogin ? "Iniciar sesión" : "Registrarse"}
           </button>
@@ -57,7 +57,7 @@ export default function Auth() {
 
         {isLogin && (
           <div className="text-center mt-4">
-            <a href="#" className="text-sm text-blue-500 hover:underline">¿Olvidaste tu contraseña?</a>
+            <a href="#" className="text-sm text-[#FCA311] hover:underline">¿Olvidaste tu contraseña?</a>
           </div>
         )}
       </div>

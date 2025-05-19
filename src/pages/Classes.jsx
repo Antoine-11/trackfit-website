@@ -1,29 +1,45 @@
 import MainLayout from "../layouts/MainLayout";
 import ClassCard from "../components/ClassCard";
-import classImg from "../assets/images/trackfit-home-one.jpg"; // Usa diferentes imágenes si tienes
 import ContactForm from "../components/ContactForm";
 import Slider from "../components/Slider";
 
+import yogaImg from "../assets/images/yoga.jpg";
+import bootyImg from "../assets/images/booty.jpg";
+import spinningImg from "../assets/images/ciclismo-indoor.jpg";
+import hiitImg from "../assets/images/hiit.jpg";
+import pilatesImg from "../assets/images/pilates.jpg";
+import zumbaImg from "../assets/images/zumba.jpg";
+import funcionalImg from "../assets/images/funcional.jpg";
+import combatImg from "../assets/images/cardiocombat.jpg";
+import crossImg from "../assets/images/cross-training.jpg";
+import gapImg from "../assets/images/abdominales.jpg";
+import SliderImg from "../assets/images/body-pan2.jpg"
+
+
 export default function Classes() {
   const classes = [
-    { title: "Cardio Intenso", description: "Quema calorías con sesiones de alta energía.", image: classImg },
-    { title: "Yoga & Stretching", description: "Relaja mente y cuerpo con nuestras sesiones de yoga.", image: classImg },
-    { title: "Entrenamiento Funcional", description: "Mejora tu fuerza y movilidad general.", image: classImg },
-    { title: "Ciclo Indoor", description: "Clases de spinning con música y ritmo intenso.", image: classImg },
-    { title: "HIIT", description: "Intervalos de alta intensidad para resultados rápidos.", image: classImg },
-    { title: "Pilates", description: "Fortalece tu core con ejercicios controlados.", image: classImg },
+    { title: "GAP", description: "Tonifica glúteos, abdominales y piernas en sesiones dirigidas al fortalecimiento y la definición. Ideal para quienes buscan resultados visibles en la parte inferior del cuerpo.", image: gapImg },
+    { title: "Yoga & Stretching", description: "Conecta cuerpo y mente con posturas suaves y ejercicios de respiración. Mejora tu flexibilidad, reduce el estrés y recarga energías.", image: yogaImg },
+    { title: "Booty Camp", description: "Clase centrada en glúteos y tren inferior, combinando fuerza, resistencia y ejercicios funcionales. ¡Activa tu cuerpo y esculpe tu figura!", image: bootyImg },
+    { title: "Spinning", description: "Vive una experiencia intensa sobre la bici al ritmo de la música. Mejora tu resistencia cardiovascular y quema calorías sin impacto articular.", image: spinningImg },
+    { title: "HIIT", description: "Entrenamiento por intervalos de alta intensidad diseñado para maximizar resultados en menos tiempo. Aumenta tu metabolismo y mejora tu capacidad física general.", image: hiitImg },
+    { title: "Pilates", description: "Fortalece el core, mejora la postura y alinea tu cuerpo con movimientos precisos y controlados. Ideal para prevenir lesiones y ganar estabilidad.", image: pilatesImg },
+    { title: "Zumba", description: "Baila, suda y diviértete con ritmos latinos y coreografías fáciles de seguir. Un entrenamiento cardiovascular disfrazado de fiesta.", image: zumbaImg },
+    { title: "Entrenamiento Funcional", description: "Mejora tu rendimiento físico con ejercicios que simulan movimientos de la vida diaria. Trabaja fuerza, equilibrio y coordinación.", image: funcionalImg },
+    { title: "Cardio Combat", description: "Combinación de boxeo, kickboxing y artes marciales sin contacto. Desahógate, quema calorías y mejora tu agilidad con energía y actitud.", image: combatImg },
+    { title: "Cross Training", description: "Entrenamiento tipo circuito con alta intensidad que combina fuerza, cardio y funcional. Desafía tus límites y supera tus marcas.", image: crossImg },
   ];
 
   return (
     <MainLayout>
       {/* Slider */}
-      <Slider title="CLASES COLECTIVAS" />
+      <Slider heroImg={SliderImg} title="CLASES COLECTIVAS" />
 
       {/* Grid de clases */}
-      <section className="px-6 py-12 bg-white text-gray-900">
-        <div className="grid md:grid-cols-2 gap-8">
+      <section className="py-24 bg-white text-gray-900">
+        <div className="grid md:grid-cols-2">
           {classes.map((item, index) => (
-            <ClassCard key={index} title={item.title} description={item.description} image={item.image} />
+            <ClassCard key={index} title={item.title} description={item.description} image={item.image} reverse={Math.floor(index / 2) % 2 !== 0} />
           ))}
         </div>
       </section>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // ✅ Importar useNavigate
+import { useNavigate } from "react-router-dom";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -8,7 +8,7 @@ export default function ContactForm() {
     message: "",
   });
 
-  const navigate = useNavigate(); // ✅ Hook para redireccionar
+  const navigate = useNavigate(); // Hook para redireccionar
 
   const handleChange = (e) => {
     setFormData((prev) => ({
@@ -20,7 +20,7 @@ export default function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Aquí puedes integrar el envío con emailjs, backend o API
+    // Integrar el envío con backend o API
     console.log("Mensaje enviado:", formData);
 
     // Redirigir tras el "envío"

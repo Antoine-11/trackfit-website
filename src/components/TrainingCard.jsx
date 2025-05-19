@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
-export default function TrainingCard({ title, description }) {
+export default function TrainingCard({ title, description, contenido }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -28,9 +28,7 @@ export default function TrainingCard({ title, description }) {
             transition={{ duration: 0.4, ease: "easeInOut" }}
             className="overflow-hidden mt-4"
           >
-            <p className="mt-4 text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in neque et nisl
-            sagittis faucibus. Proin nec nisl id libero elementum blandit. Donec volutpat orci nec
-            sem rutrum, a laoreet elit viverra.
+            <p className="mt-4 text-gray-700">{contenido}
             </p>
           </motion.div>
         )}
