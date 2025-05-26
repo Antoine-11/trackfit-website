@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import MainLayout from "../layouts/MainLayout";
 import TrainingCard from "../components/TrainingCard";
-import LastTraining from "../components/LastTraining";
 import Slider from "../components/Slider";
 
 import sliderImg from "../assets/images/man-tiredrag.jpg"
@@ -175,15 +174,6 @@ export default function Trainings() {
     },
   ];
 
-
-  const lastTraining = {
-    date: "28/04/2025",
-    type: "Entrenamiento Intermedio",
-    duration: "60 minutos",
-    focus: "Resistencia y Core",
-    trainer: "Carlos Ruiz",
-  };
-
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
     visible: { opacity: 1, y: 0 },
@@ -221,9 +211,6 @@ export default function Trainings() {
           </motion.div>
         ))}
       </section>
-
-      {/* Último entrenamiento registrado */}
-      <LastTraining training={lastTraining} />
     </MainLayout>
   );
 }
