@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  /* Aplicar fuente de encabezado a h1, h2, h3 */
+  h1, h2, h3 {
+    @apply font-heading;
+  }
+  
+  /* Aplicar fuente de cuerpo al resto del texto */
+  body {
+    @apply font-body;
+  }
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

@@ -6,6 +6,7 @@ import Home from "../pages/Home";
 import About from "../pages/About";
 import Pricing from "../pages/Pricing";
 import Classes from "../pages/Classes";
+import BookClass from "../pages/BookClass";
 import Trainings from "../pages/Trainings";
 import Contact from "../pages/Contact";
 import Auth from "../pages/Auth";
@@ -80,6 +81,7 @@ export default function AppRoutes() {
       <Route path="/about" element={<About />} />
       <Route path="/pricing" element={<Pricing />} />
       <Route path="/classes" element={<Classes />} />
+      <Route path="/book-class" element={<BookClass />} />
       <Route path="/trainings" element={<Trainings />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/thanksform" element={<ThanksForm />} />

@@ -14,24 +14,24 @@ export default function Contact() {
       {/* Información en tablas */}
       <section className="px-6 pb-12 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-white shadow-md rounded-xl p-6">
+          <div className="bg-white shadow-md border-[2px] border-[#FCA311] rounded-xl p-6">
             <h3 className="text-xl font-semibold mb-4">Horarios</h3>
             <table className="w-full text-left">
               <tbody>
                 <tr><td>Lunes - Viernes</td><td>6:00 - 23:00</td></tr>
-                <tr><td>Sábados</td><td>8:00 - 20:00</td></tr>
-                <tr><td>Domingos</td><td>8:00 - 14:00</td></tr>
+                <tr><td>Sábados</td><td>8:00 - 15:00</td></tr>
+                <tr><td>Domingos</td><td>8:00 - 15:00</td></tr>
               </tbody>
             </table>
           </div>
 
-          <div className="bg-white shadow-md rounded-xl p-6">
+          <div className="bg-white shadow-md border-[2px] border-[#FCA311] rounded-xl p-6">
             <h3 className="text-xl font-semibold mb-4">Contacto</h3>
             <table className="w-full text-left">
               <tbody>
                 <tr><td>Teléfono</td><td>+34 600 123 456</td></tr>
                 <tr><td>Email</td><td>info@trackfit.com</td></tr>
-                <tr><td>Dirección</td><td>Calle Fitness 123, Madrid</td></tr>
+                <tr><td>Dirección</td><td>Av. Huelva, 7, 11314 Campamento, Cádiz</td></tr>
               </tbody>
             </table>
           </div>

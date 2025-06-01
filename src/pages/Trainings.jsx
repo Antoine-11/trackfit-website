@@ -5,6 +5,7 @@ import TrainingCard from "../components/TrainingCard";
 import Slider from "../components/Slider";
 
 import sliderImg from "../assets/images/man-tiredrag.jpg"
+import InfoCarousel from "../components/InfoCarousel";
 
 export default function Trainings() {
   const trainingLevels = [
@@ -211,6 +212,7 @@ export default function Trainings() {
           </motion.div>
         ))}
       </section>
+      <InfoCarousel />
     </MainLayout>
   );
 }

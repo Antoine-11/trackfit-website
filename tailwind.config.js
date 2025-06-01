@@ -4,7 +4,12 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'heading': ['"Merriweather"', 'serif'], // Para h1, h2, h3
+        'body': ['"Ubuntu"', 'sans-serif'],     // Para el resto del texto
+      }
+    },
     screens: {
       'sm': '640px',
       'md': '768px',

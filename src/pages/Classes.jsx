@@ -47,9 +47,9 @@ export default function Classes() {
       {/* Formulario de contacto */}
       <section className="px-6 py-12 bg-[#F5F5F5]">
         <h2 className="text-2xl font-semibold mb-6 text-center">¿Tienes dudas? Contáctanos</h2>
-        <form className="max-w-2xl mx-auto grid gap-4">
+        <div className="max-w-2xl mx-auto">
           <ContactForm />
-        </form>
+        </div>
       </section>
     </MainLayout>
   );

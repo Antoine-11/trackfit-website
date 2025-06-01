@@ -85,7 +85,6 @@ export default function Navbar() {
             <>
               <Link to="/my-trackfit" className="hover:text-[#FCA311] transition">My TrackFit</Link>
               <div className="flex items-center space-x-4">
-                <span className="text-sm">Hola, {user?.name}</span>
                 <button
                   onClick={handleLogout}
                   className="bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded transition"
@@ -96,7 +95,7 @@ export default function Navbar() {
             </>
           ) : (
             <>
-              <Link to="/auth" className="hover:text-[#FCA311] transition">Iniciar Sesión</Link>
+              <Link to="/auth" className="text-white bg-[#FCA311] p-2 rounded-lg hover:bg-[#FCA311CC] transition">Iniciar Sesión</Link>
             </>
           )}
         </nav>
@@ -108,7 +107,7 @@ export default function Navbar() {
           className="custom:hidden focus:outline-none z-50 relative"
         >
           <svg
-            className="h-6 w-6 text-white"
+            className="h-12 w-12 text-white"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -152,7 +151,7 @@ export default function Navbar() {
               </>
             ) : (
               <>
-                <Link to="/auth" onClick={() => setIsOpen(false)} className="hover:text-[#FCA311]">Iniciar Sesión</Link>
+                <Link to="/auth" onClick={() => setIsOpen(false)} className="text-white bg-[#FCA311] p-2 rounded-lg hover:bg-[#FCA311CC] transition">Iniciar Sesión</Link>
               </>
             )}
           </div>

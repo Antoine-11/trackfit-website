@@ -27,7 +27,7 @@ export default function Footer() {
           {/* Sección 3: Contacto */}
           <div>
             <h4 className="text-lg font-semibold mb-2">Contacto</h4>
-            <p className="text-sm">📍 Calle Fitness 123, Ciudad Deportiva</p>
+            <p className="text-sm">📍 Av. Huelva, 7, 11314 Campamento, Cádiz</p>
             <p className="text-sm mt-1">📞 +34 600 123 456</p>
             <p className="text-sm mt-1">📧 contacto@trackfit.com</p>
           </div>
