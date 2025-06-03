@@ -285,7 +285,7 @@ const MyTrackfit = () => {
                 <div className="text-green-600">
                   <p className="font-semibold">Plan: {subscription.subscription.plan.name}</p>
                   <p>
-                    Días restantes: <span className="font-bold">{subscription.days_remaining}</span>
+                    Días restantes: <span className="font-bold">{Math.round(subscription.days_remaining)}</span>
                   </p>
                   <p>Vence: {new Date(subscription.subscription.end_date).toLocaleDateString("es-ES")}</p>
                 </div>
