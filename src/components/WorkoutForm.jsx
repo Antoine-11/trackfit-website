@@ -140,7 +140,7 @@ const WorkoutForm = ({ onWorkoutCreated }) => {
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline disabled:opacity-50"
+          className="w-full bg-[#FCA311] text-[#14213D] py-2 rounded-md hover:bg-opacity-90 transition duration-300 ease-in-out border border-black shadow-[0_0_0_0_black] hover:-translate-y-1 hover:-translate-x-0.5 hover:shadow-[2px_5px_0_0_black] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[0_0_0_0_black] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:translate-x-0 disabled:hover:shadow-[0_0_0_0_black] font-semibold"
         >
           {loading ? 'Registrando...' : 'Registrar Entrenamiento'}
         </button>
