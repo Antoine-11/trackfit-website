@@ -1,4 +1,4 @@
-// src/components/ServiceCard.jsx
+
 import React from "react";
 
 export default function ServiceCard({ title, description, icon }) {

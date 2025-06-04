@@ -1,6 +1,4 @@
-"use client"
 
-// src/pages/MyTrackfit.jsx
 import { useState, useEffect } from "react"
 import { useAuth } from "../contexts/AuthContext"
 import { Link } from "react-router-dom"

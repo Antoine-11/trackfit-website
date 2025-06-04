@@ -25,7 +25,7 @@ export default function InfoCarousel() {
 
   return (
     <div className="relative w-full overflow-hidden rounded-lg">
-      {/* Slide content */}
+      {/* Contenido */}
       <div
         className="h-56 md:h-96 flex transition-transform duration-700 ease-in-out"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -43,7 +43,7 @@ export default function InfoCarousel() {
         ))}
       </div>
 
-      {/* Indicators */}
+      {/* Indicadores */}
       <div className="absolute z-30 flex space-x-3 bottom-5 left-1/2 transform -translate-x-1/2">
         {slides.map((_, index) => (
           <button
@@ -54,7 +54,7 @@ export default function InfoCarousel() {
         ))}
       </div>
 
-      {/* Controls */}
+      {/* Controladores */}
       <button onClick={prevSlide} className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 group">
         <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/50 group-hover:bg-white shadow">
           <svg className="w-4 h-4 text-black" fill="none" viewBox="0 0 6 10">
