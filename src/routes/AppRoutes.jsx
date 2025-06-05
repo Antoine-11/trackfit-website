@@ -1,4 +1,4 @@
-// AppRoutes.jsx
+
 import { Routes, Route, Navigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 
