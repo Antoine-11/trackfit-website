@@ -12,6 +12,7 @@ import Contact from "../pages/Contact";
 import Auth from "../pages/Auth";
 import ThanksForm from "../pages/ThanksForm";
 import MyTrackfit from "../pages/MyTrackfit";
+import ResetPassword from "../pages/ResetPassword";
 
 // Componente para rutas protegidas
 const ProtectedRoute = ({ children }) => {
@@ -85,6 +86,7 @@ export default function AppRoutes() {
       <Route path="/trainings" element={<Trainings />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/thanksform" element={<ThanksForm />} />
+      <Route path="/reset-password" element={<ResetPassword />} />
       
       {/* Ruta de autenticación - redirige si ya está logueado */}
       <Route 

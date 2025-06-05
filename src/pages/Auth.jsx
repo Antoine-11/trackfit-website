@@ -191,11 +191,12 @@ export default function Auth() {
 
         {isLogin && (
           <div className="text-center mt-4">
-            <a href="#" className="text-sm text-[#FCA311] hover:underline">
+            <Link to="/reset-password" className="text-sm text-[#FCA311] hover:underline">
               ¿Olvidaste tu contraseña?
-            </a>
+            </Link>
+
           </div>
-          
+
         )}
       </div>
     </div>
